@@ -1,0 +1,1 @@
+This is a poll built using MongoDB, Mongoose, Node, Express and Jade. CSS files were compiled from the [GOV_UK elements] (https://github.com/alphagov/govuk_element) Sass files.

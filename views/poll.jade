@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    h1.heading-medium Star Wars Poll
+    form(name="submitanswers",method="post",action="/submitanswers")
+        p.form-label-bold What is your favourite Star Wars film?
+        input(type="text", name="favorite")
+        br
+        p.form-label-bold Which of these characters are from the Star Wars universe?
+        .form-checkbox
+            label.form-label
+                input(type="checkbox", name="characters", value="Spock")
+                | Spock
+        .form-checkbox
+            label.form-label
+                input(type="checkbox", name="characters", value="Darth Vader")
+                | Darth Vader
+        .form-checkbox
+            label.form-label
+                input(type="checkbox", name="characters", value="Captain Kirk")
+                | Captain Kirk
+        .form-checkbox
+            label.form-label
+                input(type="checkbox", name="characters", value="Luke Skywalker")
+                | Luke Skywalker
+        .form-checkbox
+            label.form-label
+                input(type="checkbox", name="characters", value="Rey Mysterio")
+                | Rey Mysterio
+        p.form-label-bold Do you know who Rey’s parents are?
+        .trigger.form-radio
+            label.form-label
+                input#trigger(type="radio", name="rey", value="Yes")
+                | Yes
+        .form-radio
+            label.form-label
+                input(type="radio", name="rey", value="No" checked)
+                | No
+        br
+        .display
+            p.form-label-bold Who are Rey’s parents?
+            input(type="text", name="parents")
+        br
+        button.button(type="submit") submit

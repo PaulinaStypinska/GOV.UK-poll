@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1.heading-large POLL ANSWERS
+        br
+        each answer, i in answerlist
+            table
+                tr
+                    td Your favourite Star Wars film is #{answer.favorite}.
+                    td The character from Star Wars is:
+                        ul.list-bullet
+                            each chara in answer.characters
+                                li=chara
+                    td Do you know who Rey's parents are?   
+                        br
+                        | #{answer.rey}.
+                    td If you do know, who are they? 
+                        |#{answer.parents}             
